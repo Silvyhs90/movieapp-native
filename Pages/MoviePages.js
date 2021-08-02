@@ -2,6 +2,7 @@ import * as React from 'react';
 import {StyleSheet, Text, ScrollView, TextInput, Button, ImageBackground} from 'react-native';
 import 'react-native-gesture-handler';
 import { Movie } from '../components/Movie'
+import { StatusBar } from 'expo-status-bar';
 
 export const MovieScreen= ({ navigation }) => {
     const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=600d38b9ea12ad8eed83670ed81d230c&page=1";
@@ -64,6 +65,7 @@ export const MovieScreen= ({ navigation }) => {
           title="Tv Shows Section"
           onPress={() => navigation.navigate('TvShow')}
         />
+        <StatusBar style="dark"/>
       </ImageBackground>
       
       

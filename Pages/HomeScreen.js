@@ -2,7 +2,7 @@ import * as React from 'react';
 import {StyleSheet, Text, ScrollView, Button, ImageBackground, Image} from 'react-native';
 import 'react-native-gesture-handler';
 import { Movie } from '../components/Movie'
-
+import { StatusBar } from 'expo-status-bar';
 
 export const HomeScreen= ({ navigation }) => {
     const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=600d38b9ea12ad8eed83670ed81d230c&page=2";  
@@ -45,6 +45,7 @@ export const HomeScreen= ({ navigation }) => {
           title="Movies Section"
           onPress={() => navigation.navigate('Movie')}
         />
+         <StatusBar style="dark"/>
       </ImageBackground>
       
     );

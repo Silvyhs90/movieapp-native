@@ -2,6 +2,7 @@ import * as React from 'react';
 import {StyleSheet, Text,ScrollView, TextInput, Button, ImageBackground} from 'react-native';
 import 'react-native-gesture-handler';
 import { TvShow } from '../components/TvShow'
+import { StatusBar } from 'expo-status-bar';
 
 
 export const TvScreen= ({ navigation }) => {
@@ -63,6 +64,7 @@ export const TvScreen= ({ navigation }) => {
           title="Movie Section"
           onPress={() => navigation.navigate('Movie')}
         />
+        <StatusBar style="dark"/>
       </ImageBackground>
       
       
