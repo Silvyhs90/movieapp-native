@@ -4,7 +4,7 @@
     "slug": "react-native-movieapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/reactlogo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

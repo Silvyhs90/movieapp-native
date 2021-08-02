@@ -3,13 +3,10 @@ import { StyleSheet,Text, View, Image } from 'react-native';
 
 const IMG_API="https://image.tmdb.org/t/p/w1280";
 
-export const Movie = ({title, poster_path, overview, vote_average, release_date}) => {
+export const TvShow= ({name, poster_path, overview, number_of_episodes, origin_country}) => {
 
- 
-
-    return (
-
-    <View style={styles.container,styles.result}>
+  return (
+        <View style={styles.container,styles.result}>
         <Image
          source={{uri: IMG_API+poster_path}}
          style={{
@@ -17,9 +14,9 @@ export const Movie = ({title, poster_path, overview, vote_average, release_date}
         }}
         resizeMode="cover"
         />
-        <Text style={styles.heading}>{title}</Text>
-            <Text style={styles.heading}>{release_date}</Text>
-            <Text style={styles.heading}>{vote_average}</Text>
+        <Text style={styles.heading}>{name}</Text>
+            <Text style={styles.heading}>{origin_country}</Text>
+            <Text style={styles.heading}>{number_of_episodes}</Text>
             <Text style={styles.heading}>Sinopsis</Text>
             <Text style={styles.heading}>{overview}</Text>
     </View>
