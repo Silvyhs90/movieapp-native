@@ -17,7 +17,7 @@ export const TvShow= ({name, poster_path, overview, number_of_episodes, origin_c
         <Text style={styles.heading}>{name}</Text>
             <Text style={styles.heading}>{origin_country}</Text>
             <Text style={styles.heading}>{number_of_episodes}</Text>
-            <Text style={styles.heading}>Sinopsis</Text>
+            <Text style={styles.plot}>Sinopsis</Text>
             <Text style={styles.heading}>{overview}</Text>
     </View>
     );
@@ -47,11 +47,18 @@ const styles = StyleSheet.create({
       marginBottom:20
     },
     heading:{
-      color: '#FFF',
-      fontSize:18,
-      fontWeight: '700',
-      padding: 20,
-      backgroundColor:'#61060F'
-    }
+        color: '#FFF',
+        fontSize:18,
+        fontWeight: '700',
+        padding: 10,
+        backgroundColor:'#393E40'
+      },
+      plot:{
+        color: '#FFF',
+        fontSize:30,
+        fontWeight: '700',
+        padding: 10,
+        backgroundColor:'#393E40'
+      }
 
 })

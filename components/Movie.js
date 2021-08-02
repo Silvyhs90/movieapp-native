@@ -20,7 +20,7 @@ export const Movie = ({title, poster_path, overview, vote_average, release_date}
         <Text style={styles.heading}>{title}</Text>
             <Text style={styles.heading}>{release_date}</Text>
             <Text style={styles.heading}>{vote_average}</Text>
-            <Text style={styles.heading}>Sinopsis</Text>
+            <Text style={styles.plot}>Sinopsis</Text>
             <Text style={styles.heading}>{overview}</Text>
     </View>
     );
@@ -53,8 +53,15 @@ const styles = StyleSheet.create({
       color: '#FFF',
       fontSize:18,
       fontWeight: '700',
-      padding: 20,
-      backgroundColor:'#61060F'
+      padding: 10,
+      backgroundColor:'#393E40'
+    },
+    plot:{
+      color: '#FFF',
+      fontSize:30,
+      fontWeight: '700',
+      padding: 10,
+      backgroundColor:'#393E40'
     }
 
 })

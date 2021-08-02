@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, Text, View , Image, ScrollView, TextInput, Button} from 'react-native';
+import {StyleSheet, Text,ScrollView, TextInput, Button, ImageBackground} from 'react-native';
 import 'react-native-gesture-handler';
 import { TvShow } from '../components/TvShow'
 
@@ -39,8 +39,11 @@ export const TvScreen= ({ navigation }) => {
   
     return (
      
-      <View style={styles.container}>
-        <Text style={styles.title}>TvShows Search</Text>
+      <ImageBackground 
+      style={styles.container}
+      source={require("../assets/wallpaper.png")}
+      >
+        <Text style={styles.title}>Tv Shows Search</Text>
       <TextInput
       style={styles.searchbox}
       onChangeText={text => setState(prevState => {
@@ -60,7 +63,7 @@ export const TvScreen= ({ navigation }) => {
           title="Movie Section"
           onPress={() => navigation.navigate('Movie')}
         />
-      </View>
+      </ImageBackground>
       
       
     );

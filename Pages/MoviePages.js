@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, Text, View , Image, ScrollView, TextInput, Button} from 'react-native';
+import {StyleSheet, Text, ScrollView, TextInput, Button, ImageBackground} from 'react-native';
 import 'react-native-gesture-handler';
 import { Movie } from '../components/Movie'
 
@@ -40,7 +40,10 @@ export const MovieScreen= ({ navigation }) => {
   
     return (
      
-      <View style={styles.container}>
+      <ImageBackground 
+      style={styles.container}
+      source={require("../assets/wallpaper.png")}
+      >
         <Text style={styles.title}>Movie Search</Text>
       <TextInput
       style={styles.searchbox}
@@ -61,7 +64,7 @@ export const MovieScreen= ({ navigation }) => {
           title="Tv Shows Section"
           onPress={() => navigation.navigate('TvShow')}
         />
-      </View>
+      </ImageBackground>
       
       
     );
@@ -71,7 +74,7 @@ export const MovieScreen= ({ navigation }) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor:'#000000',
+      backgroundColor:'#3F4763',
       alignItems:'center',
       justifyContent:'flex-start',
       paddingTop: 70,
